@@ -12,11 +12,20 @@
     <title>Document</title>
 </head>
 <body>
+
+    <form action="inserir.php" method="get">
+        Nome: <input type="text" name="nome" required>
+        Idade: <input type="number" name="idade">
+        <input type="submit" value="Salvar">
+    </form>
+    <br><br>
+
     
     <table width="100%" border="1">
         <tr>
             <th>ID</th>
             <th>Nome</th>
+            <th>Idade</th>
             <th>Ações</th>
         </tr>
     
@@ -26,7 +35,8 @@
             <tr>
                 <td><?php echo $linha->id ?></td>
                 <td><?php echo $linha->nome ?></td>
-                <td><a href="excluir.php?id=">Excluir</a></td>
+                <td><?php echo $linha->idade ?></td>
+                <td><a href="excluir.php?id=<?php echo $linha->id ?>">Excluir</a></td>
             </tr>
         <?php 
             } 
