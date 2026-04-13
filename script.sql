@@ -7,3 +7,5 @@ CREATE TABLE `aluno` (
   `idade` int DEFAULT NULL,
   PRIMARY KEY (`id`));
 
+
+
